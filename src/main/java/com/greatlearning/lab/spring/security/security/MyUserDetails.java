@@ -22,15 +22,11 @@ public class MyUserDetails implements org.springframework.security.core.userdeta
     public Collection<? extends GrantedAuthority> getAuthorities() {
         List<Role> roles = user.getRoles();
 
-        System.out.println(user.getUsername() + " Has List<Role>....." + roles);
-
         List<SimpleGrantedAuthority> authorities = new ArrayList<>();
 
         for (Role role : roles) {
             authorities.add(new SimpleGrantedAuthority(role.getName()));
         }
-
-        System.out.println(user.getUsername() + " Has authorities....." + authorities);
 
         return authorities;
     }

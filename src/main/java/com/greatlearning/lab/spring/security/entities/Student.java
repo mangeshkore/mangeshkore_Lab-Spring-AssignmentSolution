@@ -7,14 +7,14 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
-@Table(name="student")
+@Table(name = "student")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer studentId;
+    private int studentId;
 
     private String name;
 

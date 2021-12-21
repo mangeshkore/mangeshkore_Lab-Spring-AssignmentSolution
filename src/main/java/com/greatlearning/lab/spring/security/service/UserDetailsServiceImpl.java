@@ -19,5 +19,4 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         User user = userRepository.getByUsername(username);
         return new MyUserDetails(user);
     }
-
 }

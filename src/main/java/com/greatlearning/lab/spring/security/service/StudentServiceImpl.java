@@ -33,4 +33,3 @@ public class StudentServiceImpl implements StudentService {
         studentRepository.deleteByStudentId(id);
     }
 }
-
